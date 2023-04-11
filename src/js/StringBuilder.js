@@ -1,7 +1,7 @@
 var Builder = require("./Builder");
 
 function StringBuilder(string) {
-  if (!string) string = '';
+  if (!string) string = "";
   Builder.call(this, string);
 }
 Object.setPrototypeOf(StringBuilder.prototype, Builder.prototype);
