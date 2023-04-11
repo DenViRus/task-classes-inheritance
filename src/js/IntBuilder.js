@@ -1,17 +1,12 @@
-const Builder = require('./Builder');
+const Builder = require("./Builder");
 
 class IntBuilder extends Builder {
   constructor(int = 0) {
     super(int);
   }
 
-  plus(...n) {
-    this.val += [...n].reduce((sum, cur) => sum + cur, 0);
-    return this;
-  }
-
   minus(...n) {
-    this.val -= [...n].reduce((sum, cur) => sum + cur, 0);
+    this.val -= n.reduce((sum, cur) => sum + cur, 0);
     return this;
   }
 
@@ -21,7 +16,7 @@ class IntBuilder extends Builder {
   }
 
   divide(n) {
-    this.val = parseInt(this.val / n) ;
+    this.val = parseInt(this.val / n);
     return this;
   }
 
